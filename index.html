@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Brototype : English Coordinators Resolve</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="modal" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="response"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="copyToClipbord()">Copy to clipboard</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <section>
+        <main class="d-flex justify-content-center align-items-center mt-5">
+            <div class="container rounded row">
+                <div class="session-report p-5 col-sm-12 col-lg-6">
+                    <label for="Report-prepared-by">Report prepared by</label>
+                    <input type="text" name="Report-prepared-by" id="Report-prepared-by" class="form-control my-3 ">
+                    <span id="lable">Session Summary</span>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Describe today's Session" style="height: 200px;" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Describe today's Session</label>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <label for="time">Starting Time &</label>
+                        <label for="venue">Venue</label>
+                    </div>
+                    <div class="d-flex my-3">
+                        <input type="time" name="time" id="time" class="form-control me-1">
+                        <select class="form-control" id="venue">
+                            <option value="basement">Basement</option>
+                            <option value="outsideBasement">Outside Basement</option>
+                            <option value="0thFloor">0th floor</option>
+                            <option value="1stFloor">1st floor</option>
+                            <option value="2ndFloor">2nd floor</option>
+                            <option value="3rdFloor">3rd floor</option>
+                            <option value="4thFloor">4th floor</option>
+                            <option value="5thFloor" selected>5th floor</option>
+                        </select>
+                    </div>
+                    <span id="lable" class="">Attendance</span>
+                    <div class="my-3 p-3 rounded border row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="1" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Akshay Nath KS</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="2" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Albin Joseph</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="3" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Amal Shiva</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="4" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Amith K. Anil</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="5" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Gopika</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="6" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Kiran MC</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="7" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Muhammed Fasal C</label>
+                            </div>
+                        </div>
+                        <div  class="col-sm-12 col-lg-6">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="8" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Naseela KT</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="9" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Salmanulfaris</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="10" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Sarath S</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="11" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Sharath J</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="12" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Shiji AA</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="13" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Suneesh CO</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input1" type="checkbox" value="14" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Vishnu MM</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success form-control" id="Generate-session-Report">Generate Report</button>
+                </div>
+                <div class="audio-task-report p-5 col-sm-12 col-lg-6">
+                    <span id="lable">Today's Audio Task</span>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Describe today's Session" id="floatingTextarea2"></textarea>
+                        <label for="floatingTextarea">Describe today's audio task</label>
+                    </div>
+                    <span id="lable">Select People Who completed Audio task</span>
+                    <div class="my-3 p-3 rounded border row">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="1" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Akshay Nath KS</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="2" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Albin Joseph</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="3" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Amal Shiva</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="4" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Amith K. Anil</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="5" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Gopika</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="6" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Kiran MC</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="7" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Muhammed Fasal C</label>
+                            </div>
+                        </div>
+                        <div  class="col-sm-12 col-lg-6">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="8" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Naseela KT</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="9" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Salmanulfaris</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="10" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Sarath S</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="11" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Sharath J</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="12" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Shiji AA</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="13" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Suneesh CO</label>
+                            </div>
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input form-check-input2" type="checkbox" value="14" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Vishnu MM</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success form-control" id="Generate-audio-task-Report">Generate Report</button>
+                </div>
+            </div>
+        </main>
+    </section>
+<!-- ... Other script tags ... -->
+<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
+</body>
+</html>

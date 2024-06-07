@@ -13,21 +13,9 @@ label{
     padding: 5px;
     color: darkslategrey;
 }
-p{
-    color: black;
-}
 .container {
     background-color: white;
     color: black;
-}
-.section {
-    padding: 20px;
-}
-/* .session-report{
-
-} */
-.audio-task-report{
-    border-left: 1px solid black;
 }
 .form-floating label {
     font-size: small;
@@ -37,6 +25,7 @@ p{
     color: rgb(89, 89, 89);
     white-space: initial;
 }
-.form-floating textarea{
-    margin-top: 10px;   
-}
+p { color: black; }
+.section { padding: 20px; }
+.audio-task-report{ border-left: 1px solid black; }
+.form-floating textarea { margin-top: 10px; }

@@ -124,30 +124,30 @@ ${notSubmitedList}
 }
 
 function generateSessionReport(Today, startingTime, endingTime, summary, presentList, absentList, author) {
-return `❗❗Session Report❗❗ 
+return `
+❗❗Session Report❗❗ 
     ------------------------------
-    
-    👨‍👨‍👧‍👦 BCE 119 Team: 1 & 2
-    🗓️ ${Today}
-    ⏰ ${startingTime} to ${endingTime}
-    
-    ⭐Coordinators⭐
+👨‍👨‍👧‍👦 BCE 119 Team: 1 & 2
+🗓️ ${Today}
+⏰ ${startingTime} to ${endingTime}
+
+⭐Coordinators⭐
     ----------------------
-    Vishnu MM && Akshay Nath KS
-    
-    📒Summary📒
+Amal Siva && Gopika Manoj
+
+📒Summary📒
     -------------------
-    ${summary}
-    
-    🤚🏻Attendees🤚🏻
+${summary}
+
+🤚🏻Attendees🤚🏻
     ----------------------------
-    ${presentList}
-    
-    Absentees
+${presentList}
+
+Absentees
     ----------------------------
-    ${absentList}
-    
-    📢Report prepared by📢
+${absentList}
+
+📢Report prepared by📢
     -----------------------------
-    ${author}`
+${author}`
 }
